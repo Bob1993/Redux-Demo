@@ -1,9 +1,28 @@
 import React from 'react'
+import {increase, decrease} from './actions/actions'
+import {connect} from 'react-redux'
 
-export default React.createClass({
+class App extends React.Component{
+
+	componentDidMount () {
+		this.interval = setInterval(increase(1), 1000)
+	}
+
+	componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  
   render() {
     return <div>
-      <h2>Welcome to React</h2>
+      <h1>{this.props.time}</h1>
     </div>
   }
-})
+}
+
+function select (state) {
+	return {
+		time: state.time
+	}
+}
+
+export default connect(select)(App)
