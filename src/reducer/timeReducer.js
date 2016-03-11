@@ -1,14 +1,11 @@
-import actionType from '../actions/actionTypes.js'
 const initialState = {time: 0}
 
 function timeReducer(state = initialState, action) {
 	switch(action.type) {
-		case actionType.INCREASE:
+		case 'INCREASE':
 			return {time: state.time + action.stepSize} 
-		break;
-		case actionType.DECREASE:
+		case 'DECREASE':
 			return {time: state.time - action.stepSize}
-		break;
 		default: return state
 	}
 }
