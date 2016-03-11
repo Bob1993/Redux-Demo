@@ -27,3 +27,5 @@ function select (state) { // 手动注入props的state，dispatch分发器被con
 }
 
 export default connect(select)(App)
+
+// bindActionCreators（actionCreator，dispatch） 表示把Redux最重要的两个分发事件的参数包装，然后可以作为props传递给子组件，也可以分开传递

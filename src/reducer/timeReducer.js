@@ -1,6 +1,6 @@
 const initialState = {time: 0}
 
-function timeReducer(state = initialState, action) {
+function timeReducer(state = initialState, action) { 
 	switch(action.type) {
 		case 'INCREASE':
 			return {time: state.time + action.stepSize} 

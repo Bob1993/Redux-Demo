@@ -16,6 +16,7 @@
     "redux": "^3.3.1"
   },
   "devDependencies": {
+    "mocha": "^2.4.5",
     "nwb": "0.7.x"
   },
   "author": "",
